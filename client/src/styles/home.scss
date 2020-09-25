@@ -1,0 +1,82 @@
+// start vars
+$mainColor: #55bcb2;
+$secColor: #666;
+// end vars
+.homePage {
+  // start general
+  .maincolor {
+    color: $mainColor;
+  } // end general
+  // start carousel
+  .carousel {
+    img {
+      height: 80vh;
+      width: 100%;
+      object-fit: cover;
+      object-position: top center;
+    }
+    .carousel-caption {
+      bottom: 30%;
+      width: 50%;
+      h3 {
+        font-family: "Raleway", sans-serif;
+        padding: 8px 0;
+        font-size: 16px;
+        line-height: 17px;
+        font-weight: 800;
+        color: $secColor;
+        letter-spacing: 12px;
+        text-align: left;
+      }
+      p {
+        font-size: 55px;
+        line-height: 55px;
+        font-weight: 700;
+        color: #333;
+        padding: 8px 0;
+        text-align: left;
+        text-transform: capitalize;
+        line-height: 1.2;
+      }
+      button {
+        padding: 12px 40px;
+        font-size: 12px;
+        letter-spacing: 2px;
+        font-weight: 600;
+        background-color: $mainColor;
+        border: none;
+        color: #fff;
+        line-height: 1;
+        text-align: left;
+        float: left;
+        text-transform: uppercase;
+        border-radius: 0;
+        margin-top: 20px;
+      }
+    }
+    .carousel-indicators {
+      li {
+        background-color: $secColor;
+      }
+    }
+  }
+  //  end carousel
+  // start masonry
+  .my-masonry-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: -30px;
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px;
+    background-clip: padding-box;
+  }
+
+  .my-masonry-grid_column > div {
+    background: grey;
+    margin-bottom: 30px;
+  }
+  // end masonry
+}
