@@ -1,12 +1,37 @@
+// start general
 // start vars
 $mainColor: #55bcb2;
 $secColor: #666;
-// end vars
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+}
+.maincolor {
+  color: $mainColor;
+}
+button {
+  padding: 12px 40px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-color: $mainColor !important;
+  border: none;
+  color: #fff;
+  line-height: 1;
+  text-align: left;
+  float: left;
+  text-transform: capitalize;
+  border-radius: 0 !important;
+  margin-top: 20px;
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// end general
+
 .homePage {
-  // start general
-  .maincolor {
-    color: $mainColor;
-  } // end general
   // start carousel
   .carousel {
     img {
@@ -38,21 +63,6 @@ $secColor: #666;
         text-transform: capitalize;
         line-height: 1.2;
       }
-      button {
-        padding: 12px 40px;
-        font-size: 12px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        background-color: $mainColor;
-        border: none;
-        color: #fff;
-        line-height: 1;
-        text-align: left;
-        float: left;
-        text-transform: uppercase;
-        border-radius: 0;
-        margin-top: 20px;
-      }
     }
     .carousel-indicators {
       li {
@@ -61,22 +71,41 @@ $secColor: #666;
     }
   }
   //  end carousel
-  // start masonry
-  .my-masonry-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin-left: -30px;
-    width: auto;
+  // start categories
+  .categories {
+    padding: 5px;
+    .categoryCol {
+      padding: 0;
+      .catContainer {
+        position: relative;
+        height: 350px;
+        width: 100%;
+        padding: 5px;
+        &.longCat {
+          height: 550px;
+        }
+        img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+        button {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          color: white;
+          font-size: 16px;
+          padding: 12px 24px;
+          border: none;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+      }
+    }
   }
-  .my-masonry-grid_column {
-    padding-left: 30px;
-    background-clip: padding-box;
-  }
-
-  .my-masonry-grid_column > div {
-    background: grey;
-    margin-bottom: 30px;
-  }
-  // end masonry
+  // end categories
 }

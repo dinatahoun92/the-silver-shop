@@ -1,9 +1,12 @@
 import React from "react";
-import Masonry from "react-masonry-css";
-import { Carousel, Button } from "react-bootstrap";
+import { Carousel, Button, Row, Col, Container } from "react-bootstrap";
 import slider1 from "./images/slider1.jpg";
 import slider2 from "./images/slider2.jpg";
 import slider3 from "./images/slider3.jpg";
+import cat1 from "./images/bracellets.jpg";
+import cat2 from "./images/earings.jpg";
+import cat3 from "./images/necklace.jpg";
+import cat4 from "./images/rings.jpg";
 import "./styles/home.scss";
 
 export default function Home() {
@@ -46,11 +49,34 @@ export default function Home() {
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-      <Masonry
-        breakpointCols={3}
-        className="my-masonry-grid"
-        columnClassName="my-masonry-grid_column"
-      ></Masonry>
+      {/* start categories  */}
+      <div className="categories">
+        <Container fluid>
+          <Row>
+            <Col xs={12} sm={6} className="categoryCol">
+              <div className="catContainer longCat">
+                <img src={cat1} alt="" />
+                <Button variant="info">Bracellets</Button>
+              </div>
+              <div className="catContainer">
+                <img src={cat2} alt="" />
+                <Button variant="info">Earings</Button>
+              </div>
+            </Col>
+            <Col xs={12} sm={6} className="categoryCol">
+              <div className="catContainer">
+                <img src={cat3} alt="" />
+                <Button variant="info">Chains</Button>
+              </div>
+              <div className="catContainer longCat">
+                <img src={cat4} alt="" />
+                <Button variant="info">Rings</Button>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+      {/* end categories */}
     </div>
   );
 }
